@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#7EAFD0" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#00F0FF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#08080C" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sky Blue to Cyan Gradient -->
+    <linearGradient id="skyCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#7EAFD0"/>
+      <stop offset="100%" stop-color="#00F0FF"/>
+    </linearGradient>
+
+    <!-- Deep Metallic Gradient -->
+    <linearGradient id="metalGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0E1726"/>
+      <stop offset="50%" stop-color="#1B293E"/>
+      <stop offset="100%" stop-color="#2D4668"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGlow)"/>
+
+  <!-- Outer Isometric Hexagonal Chassis -->
+  <polygon points="256,40 436,144 436,368 256,472 76,368 76,144" stroke="#7EAFD0" stroke-width="3" stroke-dasharray="16 8" fill="url(#metalGrad)" fill-opacity="0.7"/>
+
+  <!-- Inner Segmented Precision Ring -->
+  <circle cx="256" cy="256" r="145" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2"/>
+  <circle cx="256" cy="256" r="135" stroke="#7EAFD0" stroke-width="3" stroke-dasharray="24 12 6 12"/>
+
+  <!-- Techfest Quantum Monogram / Geometric Turbine Core -->
+  <!-- Blade 1: Top Right Vector -->
+  <path d="M256,120 L350,174 L310,244 L256,212 Z" fill="url(#skyCyanGrad)" filter="url(#neonGlow)"/>
+  
+  <!-- Blade 2: Bottom Right Vector -->
+  <path d="M350,338 L256,392 L256,330 L310,298 Z" fill="#7EAFD0" fill-opacity="0.85"/>
+  
+  <!-- Blade 3: Left Vector -->
+  <path d="M162,174 L256,120 L256,182 L202,214 Z" fill="#FFFFFF"/>
+  
+  <!-- Blade 4: Bottom Left Vector -->
+  <path d="M162,338 L202,268 L256,300 L256,392 Z" fill="url(#skyCyanGrad)"/>
+
+  <!-- Center Core Singularity Diamond -->
+  <polygon points="256,220 292,256 256,292 220,256" fill="#08080C" stroke="#00F0FF" stroke-width="4"/>
+  <circle cx="256" cy="256" r="8" fill="#FFFFFF" filter="url(#neonGlow)"/>
+
+  <!-- Technical HUD Crosshairs & Ticks -->
+  <line x1="256" y1="20" x2="256" y2="40" stroke="#7EAFD0" stroke-width="4"/>
+  <line x1="256" y1="472" x2="256" y2="492" stroke="#7EAFD0" stroke-width="4"/>
+  <line x1="58" y1="256" x2="78" y2="256" stroke="#7EAFD0" stroke-width="4"/>
+  <line x1="434" y1="256" x2="454" y2="256" stroke="#7EAFD0" stroke-width="4"/>
+
+  <!-- Corner Data Accents -->
+  <circle cx="100" cy="158" r="4" fill="#00F0FF"/>
+  <circle cx="412" cy="158" r="4" fill="#00F0FF"/>
+  <circle cx="100" cy="354" r="4" fill="#7EAFD0"/>
+  <circle cx="412" cy="354" r="4" fill="#7EAFD0"/>
+</svg>
